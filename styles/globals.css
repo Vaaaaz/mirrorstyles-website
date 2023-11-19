@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 5px !important;
+  background: #031122 !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #031122 !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #122A47 !important;
+  border-radius: 10px;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 57, 72, 103;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 57, 72, 103;
+    --background-end-rgb: 57, 72, 103;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.h1-selection {
+  margin-top: 30px;
+  border-radius: 9999px;
+  transition: .5s;
+  padding: 12px;
+  text-align: center;
+}
+
+.h1-selection:hover {
+  background-color: #061D3A;
+  cursor: pointer;
+}
+
+.force-skew-left:hover {
+  transform: skewY(6deg);
+}
+
+.force-skew-right:hover {
+  transform: skewY(-6deg);
+}
